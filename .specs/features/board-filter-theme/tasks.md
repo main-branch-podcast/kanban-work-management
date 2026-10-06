@@ -159,8 +159,8 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] File contains `@custom-variant dark (&:where(.dark, .dark *));`
-- [ ] Gate check passes: `npm run build && npm run lint && npm test`
+- [x] File contains `@custom-variant dark (&:where(.dark, .dark *));`
+- [x] Gate check passes: `npm run build && npm run lint && npm test`
 
 **Tests**: none
 **Gate**: build

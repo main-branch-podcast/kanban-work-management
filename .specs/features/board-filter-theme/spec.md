@@ -108,7 +108,7 @@ Each requirement gets a unique ID for tracking across design, tasks, and validat
 | THEME-02 | P1: Light and dark theme switch | Tasks | Implementing |
 | THEME-03 | P1: Light and dark theme switch | Tasks | Implementing |
 | THEME-04 | P1: Light and dark theme switch | Tasks | In Tasks |
-| THEME-05 | P1: Light and dark theme switch | Tasks | In Tasks |
+| THEME-05 | P1: Light and dark theme switch | Tasks | Implementing |
 
 **ID format:** `[CATEGORY]-[NUMBER]` (e.g., `AUTH-01`, `CART-03`, `NOTIF-02`)
 
