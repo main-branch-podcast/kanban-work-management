@@ -264,10 +264,10 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Test asserts the switch is in the top-right of the page chrome
-- [ ] Page, title, and form controls include `dark:` background/text classes
-- [ ] Gate check passes: `npm test`
-- [ ] Test count: 2 tests pass (no silent deletions)
+- [x] Test asserts the switch is in the top-right of the page chrome
+- [x] Page, title, and form controls include `dark:` background/text classes
+- [x] Gate check passes: `npm test`
+- [x] Test count: 2 tests pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
