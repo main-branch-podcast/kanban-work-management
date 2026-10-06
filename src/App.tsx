@@ -2,11 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import TodoColumn from "./components/TodoColumn";
 import TagChip from "./components/TagChip";
 import { TodoProvider, useTodoContext } from "./contexts/TodoContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import ThemeSwitch from "./components/ThemeSwitch";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function AppContent() {
   const {
     todosByStatus,
+    nameFilter,
+    setNameFilter,
     tags,
     selectedTags,
     addTodo,
@@ -86,13 +90,18 @@ function AppContent() {
   return (
     <div
       ref={appRef}
-      className="min-h-screen px-8 py-8"
+      className="min-h-screen bg-white text-gray-900 px-8 py-8 dark:bg-gray-900 dark:text-gray-100"
       onDrop={handleAppDrop}
       onDragOver={(e) => e.preventDefault()}
     >
-      <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
-        Work Management
-      </h1>
+      <header className="relative mb-6 flex items-center justify-center">
+        <h1 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-100">
+          Work Management
+        </h1>
+        <div className="absolute right-0 top-0">
+          <ThemeSwitch />
+        </div>
+      </header>
 
       {/* Add todo form */}
       <div className="max-w-lg mx-auto mb-6">
@@ -102,7 +111,7 @@ function AppContent() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Add a new task..."
-            className="w-full p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full bg-white text-gray-900 p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600"
           />
           <button
             type="submit"
@@ -159,6 +168,17 @@ function AppContent() {
         </div>
       </div>
 
+      <div className="max-w-lg mx-auto mb-6">
+        <input
+          type="search"
+          value={nameFilter}
+          onChange={(e) => setNameFilter(e.target.value)}
+          placeholder="Filter tasks by name..."
+          aria-label="Filter tasks by name"
+          className="w-full bg-white text-gray-900 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600"
+        />
+      </div>
+
       {/* Kanban columns */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* To Do column */}
@@ -191,9 +211,11 @@ function AppContent() {
 function App() {
   return (
     <div>
-      <TodoProvider>
-        <AppContent />
-      </TodoProvider>
+      <ThemeProvider>
+        <TodoProvider>
+          <AppContent />
+        </TodoProvider>
+      </ThemeProvider>
       <SpeedInsights />
     </div>
   );

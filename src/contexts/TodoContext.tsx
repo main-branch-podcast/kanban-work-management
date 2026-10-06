@@ -5,6 +5,7 @@ import {
   useEffect,
   ReactNode,
 } from "react";
+import { matchesNameFilter } from "../lib/cardFilter";
 
 type Status = "todo" | "doing" | "done";
 
@@ -22,6 +23,8 @@ interface TodoContextType {
   selectedTags: string[];
   activeCard: number | null;
   draggedTag: string | null;
+  nameFilter: string;
+  setNameFilter: (query: string) => void;
 
   // Todo actions
   addTodo: (text: string) => void;
@@ -90,6 +93,7 @@ export function TodoProvider({ children }: TodoProviderProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const [draggedTag, setDraggedTag] = useState<string | null>(null);
+  const [nameFilter, setNameFilter] = useState("");
 
   // Save todos and tags to localStorage whenever they change
   useEffect(() => {
@@ -317,9 +321,15 @@ export function TodoProvider({ children }: TodoProviderProps) {
 
   // Filter todos by status for easier to work with
   const todosByStatus = {
-    todo: todos.filter((todo) => todo.status === "todo"),
-    doing: todos.filter((todo) => todo.status === "doing"),
-    done: todos.filter((todo) => todo.status === "done"),
+    todo: todos.filter(
+      (todo) => todo.status === "todo" && matchesNameFilter(todo.text, nameFilter)
+    ),
+    doing: todos.filter(
+      (todo) => todo.status === "doing" && matchesNameFilter(todo.text, nameFilter)
+    ),
+    done: todos.filter(
+      (todo) => todo.status === "done" && matchesNameFilter(todo.text, nameFilter)
+    ),
   };
 
   const value = {
@@ -328,6 +338,8 @@ export function TodoProvider({ children }: TodoProviderProps) {
     selectedTags,
     activeCard,
     draggedTag,
+    nameFilter,
+    setNameFilter,
     addTodo,
     updateTodoText,
     deleteTodo,
