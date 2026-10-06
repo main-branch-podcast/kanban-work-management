@@ -237,10 +237,10 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Click invokes toggle (tested with a mock or wrapped provider)
-- [ ] Control has an accessible name (e.g. "Switch to dark mode" / "Switch to light mode")
-- [ ] Gate check passes: `npm test`
-- [ ] Test count: 2 tests pass (no silent deletions)
+- [x] Click invokes toggle (tested with a mock or wrapped provider)
+- [x] Control has an accessible name (e.g. "Switch to dark mode" / "Switch to light mode")
+- [x] Gate check passes: `npm test`
+- [x] Test count: 2 tests pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
