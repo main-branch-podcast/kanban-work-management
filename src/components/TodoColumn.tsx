@@ -17,11 +17,11 @@ const TodoColumn: React.FC<TodoColumnProps> = ({ columnId, todos, title }) => {
   const getBadgeColor = () => {
     switch (columnId) {
       case "todo":
-        return "bg-blue-500";
+        return "bg-blue-500 dark:bg-blue-300";
       case "doing":
-        return "bg-yellow-500";
+        return "bg-yellow-500 dark:bg-yellow-300";
       case "done":
-        return "bg-green-500";
+        return "bg-green-500 dark:bg-green-300";
       default:
         return "bg-gray-500";
     }
@@ -30,12 +30,12 @@ const TodoColumn: React.FC<TodoColumnProps> = ({ columnId, todos, title }) => {
   const activeTodoId = allTodos[activeCard!]?.id;
 
   return (
-    <div className="min-h-[200px]">
+    <div className="min-h-[200px] bg-gray-100 rounded-md p-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100">
       {/* Column header with task count */}
-      <div className="flex items-center justify-start mb-4 bg-gray-200 py-2 px-3 rounded">
-        <h2 className="text-lg font-semibold mr-2">{title}</h2>
+      <div className="flex items-center justify-start mb-4 bg-gray-200 py-2 px-3 rounded dark:bg-gray-700">
+        <h2 className="text-lg font-semibold mr-2 dark:text-gray-100">{title}</h2>
         <span
-          className={`${getBadgeColor()} text-white text-xs font-medium px-2.5 py-0.5 rounded-full`}
+          className={`${getBadgeColor()} text-white dark:text-gray-900 text-xs font-medium px-2.5 py-0.5 rounded-full`}
         >
           {todos.length}
         </span>
@@ -51,7 +51,9 @@ const TodoColumn: React.FC<TodoColumnProps> = ({ columnId, todos, title }) => {
       )}
 
       {todos.length === 0 ? (
-        <div className="text-center py-4 text-gray-500">No tasks</div>
+        <div className="text-center py-4 text-gray-500 dark:text-gray-300">
+          No tasks
+        </div>
       ) : (
         todos.map((todo, index) => (
           <div key={todo.id} className="mb-2">

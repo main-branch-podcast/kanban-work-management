@@ -291,9 +291,9 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Column root/header/empty copy include dark background and light text utilities
-- [ ] Gate check passes: `npm test`
-- [ ] Test count: 1 test pass (no silent deletions)
+- [x] Column root/header/empty copy include dark background and light text utilities
+- [x] Gate check passes: `npm test`
+- [x] Test count: 1 test pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
