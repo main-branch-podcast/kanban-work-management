@@ -210,10 +210,10 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Tests cover: no key + prefers dark → dark; stored light beats prefers dark; toggle writes `theme`
-- [ ] `localStorage` throw on write does not crash the toggle
-- [ ] Gate check passes: `npm test`
-- [ ] Test count: 4 tests pass (no silent deletions)
+- [x] Tests cover: no key + prefers dark → dark; stored light beats prefers dark; toggle writes `theme`
+- [x] `localStorage` throw on write does not crash the toggle
+- [x] Gate check passes: `npm test`
+- [x] Test count: 4 tests pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
