@@ -103,11 +103,11 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Invalid or missing stored values fall back to `prefersDark`
-- [ ] Stored `light`/`dark` win over OS
-- [ ] `toggleTheme` flips `light` ↔ `dark`
-- [ ] Gate check passes: `npm test`
-- [ ] Test count: 6 tests pass (no silent deletions)
+- [x] Invalid or missing stored values fall back to `prefersDark`
+- [x] Stored `light`/`dark` win over OS
+- [x] `toggleTheme` flips `light` ↔ `dark`
+- [x] Gate check passes: `npm test`
+- [x] Test count: 6 tests pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
