@@ -165,12 +165,12 @@ const TodoCard: React.FC<TodoCardProps> = ({ todo }) => {
   // Get background color based on drag state
   const getBackgroundColor = () => {
     if (isTagHoveringOver) {
-      return "bg-green-100";
+      return "bg-green-100 dark:bg-green-900";
     }
     if (isCardHoveringOver) {
-      return "bg-red-100";
+      return "bg-red-100 dark:bg-red-900";
     }
-    return "bg-white";
+    return "bg-white dark:bg-gray-700";
   };
 
   return (
@@ -191,7 +191,7 @@ const TodoCard: React.FC<TodoCardProps> = ({ todo }) => {
         }
       }}
       className={`flex flex-col p-3 rounded-md shadow-sm border-l-4 select-none transition-all
-        hover:shadow-md ${getStatusColor()} ${getBackgroundColor()} ${
+        hover:shadow-md text-gray-900 dark:text-gray-100 ${getStatusColor()} ${getBackgroundColor()} ${
         isDragging ? "opacity-50 scale-95" : ""
       }`}
     >
@@ -222,11 +222,11 @@ const TodoCard: React.FC<TodoCardProps> = ({ todo }) => {
                 setIsEditing(false);
               }
             }}
-            className="flex-1 ml-1 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 ml-1 bg-white text-gray-900 border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600"
           />
         ) : (
           <span
-            className="flex-1 ml-1 text-gray-800 cursor-text"
+            className="flex-1 ml-1 text-gray-800 cursor-text dark:text-gray-100"
             onDoubleClick={() => setIsEditing(true)}
           >
             {todo.text}
@@ -236,7 +236,7 @@ const TodoCard: React.FC<TodoCardProps> = ({ todo }) => {
         <button
           ref={tagButtonRef}
           onClick={() => setShowTagSelector(!showTagSelector)}
-          className="mr-2 bg-gray-100 hover:bg-gray-200 p-1 rounded cursor-pointer"
+          className="mr-2 bg-gray-100 hover:bg-gray-200 p-1 rounded cursor-pointer dark:bg-gray-600 dark:hover:bg-gray-500"
           title="Manage Tags"
         >
           <TagIcon className="h-4 w-4 text-gray-600" />

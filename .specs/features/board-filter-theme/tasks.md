@@ -317,9 +317,9 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Card root uses a dark background and light text in dark mode
-- [ ] Gate check passes: `npm test`
-- [ ] Test count: 1 test pass (no silent deletions)
+- [x] Card root uses a dark background and light text in dark mode
+- [x] Gate check passes: `npm test`
+- [x] Test count: 1 test pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
