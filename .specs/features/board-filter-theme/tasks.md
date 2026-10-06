@@ -184,9 +184,9 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Script runs in `<head>` without `type="module"`
-- [ ] Missing/invalid storage follows `prefers-color-scheme`; stored value wins
-- [ ] Gate check passes: `npm run build && npm run lint && npm test`
+- [x] Script runs in `<head>` without `type="module"`
+- [x] Missing/invalid storage follows `prefers-color-scheme`; stored value wins
+- [x] Gate check passes: `npm run build && npm run lint && npm test`
 
 **Tests**: none
 **Gate**: build
