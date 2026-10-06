@@ -398,11 +398,11 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Typing filters cards across columns without submitting a form
-- [ ] Clearing the field restores cards
-- [ ] To Do, In Progress, and Done headings remain visible when nothing matches
-- [ ] Gate check passes: `npm run build && npm run lint && npm test`
-- [ ] Test count: 3 tests pass (no silent deletions)
+- [x] Typing filters cards across columns without submitting a form
+- [x] Clearing the field restores cards
+- [x] To Do, In Progress, and Done headings remain visible when nothing matches
+- [x] Gate check passes: `npm run build && npm run lint && npm test`
+- [x] Test count: 3 tests pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: build

@@ -9,6 +9,8 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 function AppContent() {
   const {
     todosByStatus,
+    nameFilter,
+    setNameFilter,
     tags,
     selectedTags,
     addTodo,
@@ -164,6 +166,17 @@ function AppContent() {
             )}
           </div>
         </div>
+      </div>
+
+      <div className="max-w-lg mx-auto mb-6">
+        <input
+          type="search"
+          value={nameFilter}
+          onChange={(e) => setNameFilter(e.target.value)}
+          placeholder="Filter tasks by name..."
+          aria-label="Filter tasks by name"
+          className="w-full bg-white text-gray-900 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600"
+        />
       </div>
 
       {/* Kanban columns */}
