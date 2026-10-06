@@ -104,11 +104,11 @@ Each requirement gets a unique ID for tracking across design, tasks, and validat
 | FILTER-04 | P1: Filter cards by name | Tasks | In Tasks |
 | FILTER-05 | P1: Filter cards by name | Tasks | In Tasks |
 | FILTER-06 | P1: Filter cards by name | Tasks | Implementing |
-| THEME-01 | P1: Light and dark theme switch | Tasks | Implementing |
-| THEME-02 | P1: Light and dark theme switch | Tasks | Implementing |
-| THEME-03 | P1: Light and dark theme switch | Tasks | Implementing |
-| THEME-04 | P1: Light and dark theme switch | Tasks | Implementing |
-| THEME-05 | P1: Light and dark theme switch | Tasks | Implementing |
+| THEME-01 | P1: Light and dark theme switch | Tasks | Verified |
+| THEME-02 | P1: Light and dark theme switch | Tasks | Verified |
+| THEME-03 | P1: Light and dark theme switch | Tasks | Verified |
+| THEME-04 | P1: Light and dark theme switch | Tasks | Verified |
+| THEME-05 | P1: Light and dark theme switch | Tasks | Verified |
 
 **ID format:** `[CATEGORY]-[NUMBER]` (e.g., `AUTH-01`, `CART-03`, `NOTIF-02`)
 
