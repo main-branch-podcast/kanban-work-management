@@ -6,8 +6,8 @@ Users cannot find a card by name when the board has many tasks across columns. T
 
 ## Goals
 
-- [ ] User can type a name fragment and see only matching cards in every column
-- [ ] User can switch light and dark mode from the top-right corner; the choice survives reload
+- [x] User can type a name fragment and see only matching cards in every column
+- [x] User can switch light and dark mode from the top-right corner; the choice survives reload
 
 ## Out of Scope
 
@@ -122,6 +122,6 @@ Each requirement gets a unique ID for tracking across design, tasks, and validat
 
 How we know the feature is successful:
 
-- [ ] Typing a name fragment hides non-matching cards in To Do, In Progress, and Done at the same time
-- [ ] Clearing the filter restores every card
-- [ ] Theme switch in the top-right toggles appearance and survives a full reload
+- [x] Typing a name fragment hides non-matching cards in To Do, In Progress, and Done at the same time
+- [x] Clearing the filter restores every card
+- [x] Theme switch in the top-right toggles appearance and survives a full reload
