@@ -131,11 +131,11 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Case-insensitive substring match; empty/whitespace query matches all
-- [ ] Metacharacters match as literals (`includes`, not `RegExp`)
-- [ ] Function accepts only card text (tags cannot influence the result)
-- [ ] Gate check passes: `npm test`
-- [ ] Test count: 8 tests pass (no silent deletions)
+- [x] Case-insensitive substring match; empty/whitespace query matches all
+- [x] Metacharacters match as literals (`includes`, not `RegExp`)
+- [x] Function accepts only card text (tags cannot influence the result)
+- [x] Gate check passes: `npm test`
+- [x] Test count: 8 tests pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
