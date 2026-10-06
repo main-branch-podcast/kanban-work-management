@@ -98,12 +98,12 @@ Each requirement gets a unique ID for tracking across design, tasks, and validat
 
 | Requirement ID | Story | Phase | Status |
 | -------------- | ----- | ----- | ------ |
-| FILTER-01 | P1: Filter cards by name | Tasks | Implementing |
-| FILTER-02 | P1: Filter cards by name | Tasks | Implementing |
+| FILTER-01 | P1: Filter cards by name | Tasks | Verified |
+| FILTER-02 | P1: Filter cards by name | Tasks | Verified |
 | FILTER-03 | P1: Filter cards by name | Tasks | Implementing |
 | FILTER-04 | P1: Filter cards by name | Tasks | In Tasks |
-| FILTER-05 | P1: Filter cards by name | Tasks | In Tasks |
-| FILTER-06 | P1: Filter cards by name | Tasks | Implementing |
+| FILTER-05 | P1: Filter cards by name | Tasks | Verified |
+| FILTER-06 | P1: Filter cards by name | Tasks | Verified |
 | THEME-01 | P1: Light and dark theme switch | Tasks | Verified |
 | THEME-02 | P1: Light and dark theme switch | Tasks | Verified |
 | THEME-03 | P1: Light and dark theme switch | Tasks | Verified |

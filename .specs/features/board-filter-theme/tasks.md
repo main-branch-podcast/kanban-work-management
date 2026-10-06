@@ -369,12 +369,12 @@ T12 -> T13
 
 **Done when**:
 
-- [ ] Non-empty query keeps only matching `text` per column; tags do not match
-- [ ] Empty/whitespace query returns all cards
-- [ ] Column with zero matches yields `[]` (UI shows "No tasks")
-- [ ] After add/edit, `todosByStatus` reflects the current query
-- [ ] Gate check passes: `npm test`
-- [ ] Test count: 6 tests pass (no silent deletions)
+- [x] Non-empty query keeps only matching `text` per column; tags do not match
+- [x] Empty/whitespace query returns all cards
+- [x] Column with zero matches yields `[]` (UI shows "No tasks")
+- [x] After add/edit, `todosByStatus` reflects the current query
+- [x] Gate check passes: `npm test`
+- [x] Test count: 6 tests pass (no silent deletions)
 
 **Tests**: unit
 **Gate**: quick
